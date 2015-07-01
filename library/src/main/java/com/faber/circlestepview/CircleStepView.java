@@ -1,7 +1,5 @@
 package com.faber.circlestepview;
 
-import android.animation.ObjectAnimator;
-import android.animation.PropertyValuesHolder;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -12,6 +10,9 @@ import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
+
+import com.nineoldandroids.animation.ObjectAnimator;
+import com.nineoldandroids.animation.PropertyValuesHolder;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -96,29 +97,29 @@ public class CircleStepView extends View {
         super(context, attrs, defStyleAttr);
 
         // load the styled attributes and set their properties
-        TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.CircleStepView, defStyleAttr, 0);
+        TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.circlestep_CircleStepView, defStyleAttr, 0);
 
         if (attributes != null) {
             try {
-                mCircleRadius = (int) attributes.getDimension(R.styleable.CircleStepView_circle_radius,
+                mCircleRadius = (int) attributes.getDimension(R.styleable.circlestep_CircleStepView_circlestep_circle_radius,
                         TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, DEF_CIRCLE_RADIUS_DP, getResources().getDisplayMetrics()));
-                mCircleColor = attributes.getColor(R.styleable.CircleStepView_circle_color, Color.GRAY);
-                mCircleCount = attributes.getInt(R.styleable.CircleStepView_circle_count, 3);
-                mCircleTextSize = (int) attributes.getDimension(R.styleable.CircleStepView_circle_text_size,
+                mCircleColor = attributes.getColor(R.styleable.circlestep_CircleStepView_circlestep_circle_color, Color.GRAY);
+                mCircleCount = attributes.getInt(R.styleable.circlestep_CircleStepView_circlestep_circle_count, 3);
+                mCircleTextSize = (int) attributes.getDimension(R.styleable.circlestep_CircleStepView_circlestep_circle_text_size,
                         TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, DEF_TEXT_SIZE_SP, getResources().getDisplayMetrics()));
-                mCircleTextColor = attributes.getColor(R.styleable.CircleStepView_circle_text_color, Color.WHITE);
-                mCurrentCircleDeltaRadius = (int) attributes.getDimension(R.styleable.CircleStepView_current_circle_delta_radius,
+                mCircleTextColor = attributes.getColor(R.styleable.circlestep_CircleStepView_circlestep_circle_text_color, Color.WHITE);
+                mCurrentCircleDeltaRadius = (int) attributes.getDimension(R.styleable.circlestep_CircleStepView_circlestep_current_circle_delta_radius,
                         TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, DEF_CURRENT_CIRCLE_DELTA_RADIUS_DP, getResources().getDisplayMetrics()));
-                mCurrentInnerCircleColor = attributes.getColor(R.styleable.CircleStepView_current_inner_circle_color, Color.BLUE);
-                mCurrentOuterCircleColor = attributes.getColor(R.styleable.CircleStepView_current_outer_circle_color, Color.GREEN);
-                mPathHeight = (int) attributes.getDimension(R.styleable.CircleStepView_path_height,
+                mCurrentInnerCircleColor = attributes.getColor(R.styleable.circlestep_CircleStepView_circlestep_current_inner_circle_color, Color.BLUE);
+                mCurrentOuterCircleColor = attributes.getColor(R.styleable.circlestep_CircleStepView_circlestep_current_outer_circle_color, Color.GREEN);
+                mPathHeight = (int) attributes.getDimension(R.styleable.circlestep_CircleStepView_circlestep_path_height,
                         TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, DEF_PATH_HEIGHT_DP, getResources().getDisplayMetrics()));
-                mPathColor = attributes.getColor(R.styleable.CircleStepView_path_color, Color.GREEN);
-                mTextBelowCircleDistance = (int) attributes.getDimension(R.styleable.CircleStepView_text_below_circle_distance,
+                mPathColor = attributes.getColor(R.styleable.circlestep_CircleStepView_circlestep_path_color, Color.GREEN);
+                mTextBelowCircleDistance = (int) attributes.getDimension(R.styleable.circlestep_CircleStepView_circlestep_text_below_circle_distance,
                         TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, DEF_TEXT_BELOW_CIRCLE_DISTANCE_DP, getResources().getDisplayMetrics()));
-                mTextBelowCircleSize = (int) attributes.getDimension(R.styleable.CircleStepView_text_below_circle_size,
+                mTextBelowCircleSize = (int) attributes.getDimension(R.styleable.circlestep_CircleStepView_circlestep_text_below_circle_size,
                         TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, DEF_TEXT_SIZE_SP, getResources().getDisplayMetrics()));
-                mTextBelowCircleColor = attributes.getColor(R.styleable.CircleStepView_text_below_circle_color, Color.BLACK);
+                mTextBelowCircleColor = attributes.getColor(R.styleable.circlestep_CircleStepView_circlestep_text_below_circle_color, Color.BLACK);
             } finally {
                 // make sure recycle is always called.
                 attributes.recycle();

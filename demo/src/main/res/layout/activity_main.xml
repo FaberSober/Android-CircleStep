@@ -10,13 +10,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        app:circle_count="3"
-        app:path_color="@color/light_green"
-        app:current_inner_circle_color="@color/light_blue"
-        app:current_outer_circle_color="@color/light_green"
-        app:circle_color="@color/light_gray"
-        app:circle_text_size="14sp"
-        app:text_below_circle_size="14sp"
-        app:text_below_circle_color="@color/text_dark_grey"/>
+        app:circlestep_circle_count="3"
+        app:circlestep_path_color="@color/light_green"
+        app:circlestep_current_inner_circle_color="@color/light_blue"
+        app:circlestep_current_outer_circle_color="@color/light_green"
+        app:circlestep_circle_color="@color/light_gray"
+        app:circlestep_circle_text_size="14sp"
+        app:circlestep_text_below_circle_size="14sp"
+        app:circlestep_text_below_circle_color="@color/text_dark_grey"/>
 
 </RelativeLayout>

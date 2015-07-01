@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <declare-styleable name="CircleStepView">
+    <declare-styleable name="circlestep_CircleStepView">
         <!-- 圆半径 -->
-        <attr name="circle_radius" format="dimension"/>
+        <attr name="circlestep_circle_radius" format="dimension"/>
         <!-- 圆默认时的颜色 -->
-        <attr name="circle_color" format="color"/>
+        <attr name="circlestep_circle_color" format="color"/>
         <!-- 圆的个数 -->
-        <attr name="circle_count" format="integer"/>
+        <attr name="circlestep_circle_count" format="integer"/>
         <!-- 圆内字体大小 -->
-        <attr name="circle_text_size" format="dimension"/>
+        <attr name="circlestep_circle_text_size" format="dimension"/>
         <!-- 圆内字体颜色 -->
-        <attr name="circle_text_color" format="color"/>
+        <attr name="circlestep_circle_text_color" format="color"/>
         <!-- 圆选中时内圈圆和外圈圆的半径差 -->
-        <attr name="current_circle_delta_radius" format="dimension"/>
+        <attr name="circlestep_current_circle_delta_radius" format="dimension"/>
         <!-- 圆选中时内圈圆的颜色 -->
-        <attr name="current_inner_circle_color" format="color"/>
+        <attr name="circlestep_current_inner_circle_color" format="color"/>
         <!-- 圆选中时外圈圆的颜色 -->
-        <attr name="current_outer_circle_color" format="color"/>
+        <attr name="circlestep_current_outer_circle_color" format="color"/>
         <!-- 路径的高度 -->
-        <attr name="path_height" format="dimension"/>
+        <attr name="circlestep_path_height" format="dimension"/>
         <!-- 路径的颜色 -->
-        <attr name="path_color" format="color"/>
+        <attr name="circlestep_path_color" format="color"/>
         <!-- 圆下文字距圆边的距离 -->
-        <attr name="text_below_circle_distance" format="dimension"/>
+        <attr name="circlestep_text_below_circle_distance" format="dimension"/>
         <!-- 圆下文字字体大小 -->
-        <attr name="text_below_circle_size" format="dimension"/>
+        <attr name="circlestep_text_below_circle_size" format="dimension"/>
         <!-- 圆下文字字体颜色 -->
-        <attr name="text_below_circle_color" format="color"/>
+        <attr name="circlestep_text_below_circle_color" format="color"/>
     </declare-styleable>
 
 </resources>
